@@ -43,26 +43,6 @@ Write-Host "✅ PowerShell profile updated with Oh-My-Posh and PSReadLine"
 # 4️⃣ Configure VS Code terminal (optional but recommended)
 Write-Host "Configuring VS Code terminal settings..." -ForegroundColor Cyan
 
-$settingsPath = "$HOME\AppData\Roaming\Code\User\settings.json"
-if (!(Test-Path $settingsPath)) {
-    New-Item -Type File -Path $settingsPath -Force
-}
-
-# Load existing settings
-$existingSettings = @{}
-if ((Get-Content $settingsPath -ErrorAction SilentlyContinue) -ne $null) {
-    $existingSettings = Get-Content $settingsPath | Out-String | ConvertFrom-Json
-}
-
-# Merge/update terminal settings
-$terminalSettings = @{
-    "terminal.integrated.fontFamily"     = "Fira Code Nerd Font, JetBrains Mono, monospace"
-    "terminal.integrated.fontSize"       = 14
-    "terminal.integrated.cursorBlinking" = $true
-    "terminal.integrated.cursorStyle"    = "underline"
-    "terminal.integrated.scrollback"     = 10000
-    "terminal.integrated.enableBell"     = $false
-}
 
 $mergedSettings = $existingSettings + $terminalSettings
 $mergedSettings | ConvertTo-Json -Depth 10 | Set-Content -Path $settingsPath -Encoding UTF8
