@@ -23,8 +23,8 @@
 <br/>
 
 <div align="center">
-    <img src="https://skillicons.dev/icons?i=rust,go,java,python,html,css,typescript,javascript,c,tailwind,php,dart,git," />
-    <img src="https://skillicons.dev/icons?i=figma,vscode,postman,github,docker,mongodb,postgresql,nodejs,react,express,nextjs,vue,rocket,tauri,flutter" /><br>
+    <img src="https://skillicons.dev/icons?i=rust,go,java,python,html,css,typescript,javascript,c,php,dart,git," />
+    <img src="https://skillicons.dev/icons?i=figma,vscode,postman,docker,mongodb,postgresql,tailwind,nodejs,bun,react,nestjs,nextjs,actix,tauri,flutter" /><br>
 </div>
 
 # 📊 GitHub Stats
